@@ -69,6 +69,9 @@ group :development, :test do
   gem 'annotate', '~> 2.6.5'
   gem 'letter_opener'
   gem 'rubocop'
+
+  # Generate controllers and doc(k)s with ease!
+  gem 'harbourmaster'
 end
 
 group :test do
