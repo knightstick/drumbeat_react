@@ -54,7 +54,6 @@ group :development, :test do
   # gem 'guard-spring'
   gem 'guard-livereload', require: false
   gem 'guard-bundler', require: false
-  gem 'guard-rubocop'
   gem 'quiet_assets'
 
   gem 'rspec-rails', '~> 3.0'

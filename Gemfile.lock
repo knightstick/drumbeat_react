@@ -161,9 +161,6 @@ GEM
       guard (~> 2.1)
       guard-compat (~> 1.1)
       rspec (>= 2.99.0, < 4.0)
-    guard-rubocop (1.2.0)
-      guard (~> 2.0)
-      rubocop (~> 0.20)
     has_scope (0.6.0)
       actionpack (>= 3.2, < 5)
       activesupport (>= 3.2, < 5)
@@ -381,7 +378,6 @@ DEPENDENCIES
   guard-bundler
   guard-livereload
   guard-rspec
-  guard-rubocop
   jbuilder (~> 2.0)
   jquery-rails
   letter_opener
