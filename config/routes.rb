@@ -10,4 +10,6 @@ Rails.application.routes.draw do
       resources :scores, only: [:index, :show]
     end
   end
+
+  resources :exercises, only: [:index, :show]
 end
