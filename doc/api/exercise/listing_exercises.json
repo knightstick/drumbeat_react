@@ -1,0 +1,43 @@
+{
+  "resource": "Exercise",
+  "http_method": "GET",
+  "route": "/api/v1/exercises",
+  "description": "Listing exercises",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/api/v1/exercises",
+      "request_body": null,
+      "request_headers": {
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": null,
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"exercises\":[{\"id\":23,\"name\":\"MyString\",\"image_url\":\"MyString\",\"description\":\"MyString\",\"created_at\":\"2015-05-24T06:08:35.157Z\",\"updated_at\":\"2015-05-24T06:08:35.157Z\"}],\"meta\":{\"pagination\":{\"total_objects\":1}}}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"caa4a9bd828f4531ef8c5839f2d47335\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "ecca5187-1474-40ee-b9c4-9a79d1efa0c6",
+        "X-Runtime": "0.151824",
+        "Content-Length": "213"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

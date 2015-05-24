@@ -1,0 +1,24 @@
+{
+  "resources": [
+    {
+      "name": "Exercise",
+      "examples": [
+        {
+          "description": "Get a specific exercise",
+          "link": "exercise/get_a_specific_exercise.json",
+          "groups": "all"
+        },
+        {
+          "description": "Listing exercises",
+          "link": "exercise/listing_exercises.json",
+          "groups": "all"
+        },
+        {
+          "description": "Listing exercises from the letter B (pagination)",
+          "link": "exercise/listing_exercises_from_the_letter_b_(pagination).json",
+          "groups": "all"
+        }
+      ]
+    }
+  ]
+}

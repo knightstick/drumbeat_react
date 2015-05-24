@@ -1,0 +1,21 @@
+{
+  "resource": "Exercise",
+  "http_method": "GET",
+  "route": "/api/v1/exercises",
+  "description": "Listing exercises from the letter B (pagination)",
+  "explanation": "This uses the paginative gem for pagination by showing only the records after the record you pass in.",
+  "parameters": [
+    {
+      "required": false,
+      "scope": "from",
+      "name": "name",
+      "description": "Name of the last record on the previous page"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+
+  ]
+}
