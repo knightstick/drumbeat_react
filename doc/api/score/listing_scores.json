@@ -1,0 +1,43 @@
+{
+  "resource": "Score",
+  "http_method": "GET",
+  "route": "/api/v1/scores",
+  "description": "Listing scores",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/api/v1/scores",
+      "request_body": null,
+      "request_headers": {
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": null,
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"scores\":[{\"id\":33,\"score\":1,\"discipline\":\"bars_4\",\"user_id\":43,\"exercise_id\":79,\"created_at\":\"2015-05-24T06:25:44.547Z\",\"updated_at\":\"2015-05-24T06:25:44.547Z\"}],\"meta\":{\"pagination\":{\"total_objects\":1}}}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"d51ecd3ef4d0fd04597ada223aaaa476\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "8ed8df52-f27e-49e9-8a24-10474a4b8ff9",
+        "X-Runtime": "0.040782",
+        "Content-Length": "206"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

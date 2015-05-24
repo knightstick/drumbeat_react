@@ -1,0 +1,44 @@
+{
+  "resources": [
+    {
+      "name": "Exercise",
+      "examples": [
+        {
+          "description": "Get a specific exercise",
+          "link": "exercise/get_a_specific_exercise.json",
+          "groups": "all"
+        },
+        {
+          "description": "Listing exercises",
+          "link": "exercise/listing_exercises.json",
+          "groups": "all"
+        },
+        {
+          "description": "Listing exercises from the letter B (pagination)",
+          "link": "exercise/listing_exercises_from_the_letter_b_(pagination).json",
+          "groups": "all"
+        }
+      ]
+    },
+    {
+      "name": "Score",
+      "examples": [
+        {
+          "description": "Get a specific score",
+          "link": "score/get_a_specific_score.json",
+          "groups": "all"
+        },
+        {
+          "description": "Listing scores",
+          "link": "score/listing_scores.json",
+          "groups": "all"
+        },
+        {
+          "description": "Listing scores from the letter B (pagination)",
+          "link": "score/listing_scores_from_the_letter_b_(pagination).json",
+          "groups": "all"
+        }
+      ]
+    }
+  ]
+}
