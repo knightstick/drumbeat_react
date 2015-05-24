@@ -1,0 +1,11 @@
+inherit_from: ./.rubocop_todo.yml
+
+AllCops:
+  Exclude:
+    - vendor/**/*
+    - bin/**/*
+    - tmp/**/*
+    - db/schema.rb
+    - db/migrate/**/*
+    - config/initializers/devise.rb
+    - Guardfile
