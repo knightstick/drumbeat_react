@@ -23,6 +23,6 @@ class BaseApiController < InheritedResources::Base
   end
 
   def default_serializer_options
-    { meta: { deleted_ids: end_of_association_chain.show_deleted_ids(params[:visible_ids]), pagination: { total_objects: @total_count } } }
+    { meta: { pagination: { total_objects: @total_count } } }
   end
 end

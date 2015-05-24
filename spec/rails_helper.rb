@@ -49,6 +49,8 @@ RSpec.configure do |config|
   # https://relishapp.com/rspec/rspec-rails/docs
   config.infer_spec_type_from_file_location!
 
+  config.include FactoryGirl::Syntax::Methods
+
   # custom test helper methods
   def should_validate_length(attribute_names)
     attribute_names.each do |name|
