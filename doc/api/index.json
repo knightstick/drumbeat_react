@@ -19,6 +19,26 @@
           "groups": "all"
         }
       ]
+    },
+    {
+      "name": "Score",
+      "examples": [
+        {
+          "description": "Get a specific score",
+          "link": "score/get_a_specific_score.json",
+          "groups": "all"
+        },
+        {
+          "description": "Listing scores",
+          "link": "score/listing_scores.json",
+          "groups": "all"
+        },
+        {
+          "description": "Listing scores from the letter B (pagination)",
+          "link": "score/listing_scores_from_the_letter_b_(pagination).json",
+          "groups": "all"
+        }
+      ]
     }
   ]
 }
