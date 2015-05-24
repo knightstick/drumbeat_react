@@ -4,6 +4,7 @@ class ExercisesController < ApplicationController
   end
 
   def show
+    flash[:success] = 'Hello'
     @exercise = Exercise.find(params[:id])
   end
 end

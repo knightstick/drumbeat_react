@@ -21,8 +21,11 @@
     <div class="container" id='main-container'>
 
       <%= flash_messages %>
-      <%= yield %>
-
+      <div class='well'>
+        <div class='container'>
+          <%= yield %>
+        </div>
+      </div>
     </div>
   </body>
 </html>
