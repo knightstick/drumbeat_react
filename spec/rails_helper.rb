@@ -48,4 +48,42 @@ RSpec.configure do |config|
   # The different available types are documented in the features, such as in
   # https://relishapp.com/rspec/rspec-rails/docs
   config.infer_spec_type_from_file_location!
+
+  # custom test helper methods
+  def should_validate_length(attribute_names)
+    attribute_names.each do |name|
+      should validate_length_of(name.to_sym).is_at_most(255)
+    end
+  end
+
+  def should_validate_length_of_string_attributes_for_described_class(options={})
+    return should_validate_specific_fields(options) if (options[:only].present? || options[:except].present?)
+    should_validate_length(described_class.columns_hash.values.select do |v|
+      v.sql_type == 'character varying'
+    end.map(&:name))
+  end
+
+  def should_validate_specific_fields(options={})
+    return should_validate_length_of_only(options[:only]) if options[:only].present?
+    return should_validate_length_of_except(options[:except]) if options[:except].present?
+  end
+
+  def should_validate_length_of_only(*attributes)
+    should_validate_length_of_each(attributes)
+  end
+
+  def should_validate_length_of_except(*attributes)
+    should_validate_length_of_each(described_class.columns_hash.values.select do |v|
+      attributes.include? v
+    end.map(&:name))
+  end
+
+  def should_validate_length_of_each(array)
+    array.each {|attribute| should_validate_length(attribute)}
+  end
+
+  def should_have_a_valid_factory
+    described_instance = FactoryGirl.build(described_class.name.underscore.to_sym)
+    expect(described_instance).to be_valid
+  end
 end
