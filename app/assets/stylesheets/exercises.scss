@@ -1,3 +1,22 @@
 // Place all the styles related to the Exercises controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$exercise-spacing: 50px;
+
+.exercise-body {
+  .exercise-header {
+    text-align: center;
+  }
+  img {
+    max-width: 100%;
+    padding-bottom: $exercise-spacing;
+  }
+  .exercise-description {
+    margin-bottom: $exercise-spacing;
+  }
+}
+
+.scorecard {
+  text-align: center;
+}

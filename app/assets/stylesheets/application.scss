@@ -12,8 +12,11 @@
  *
  */
 
+@import 'base';
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "exercises";
+@import "home";
 
 $margin-distance: 15px;
 

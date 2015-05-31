@@ -2,7 +2,7 @@ var Exercise = React.createClass({
 
   render: function() {
     return(
-      <div>
+      <div className='exercise'>
         <ExerciseBody exercise={this.props.exercise} />
         <Scorecard exercise={this.props.exercise} />
       </div>
@@ -10,13 +10,17 @@ var Exercise = React.createClass({
   }
 });
 
+
 var ExerciseBody = React.createClass({
 
   render: function() {
     return(
-      <div>
-        <h1>{this.props.exercise.name}</h1>
+      <div className='exercise-body'>
+        <h1 className='exercise-header'>{this.props.exercise.name}</h1>
         <img src={this.props.exercise.image_url} alt={this.props.exercise.name} />
+        <div className='well exercise-description'>
+          <p>{this.props.exercise.description}</p>
+        </div>
       </div>
     );
   }
@@ -26,7 +30,7 @@ var Scorecard = React.createClass({
 
   render: function() {
     return(
-      <div>
+      <div className='scorecard'>
         <h1>Scorecard</h1>
         <ScoreWidget exercise={this.props.exercise} />
       </div>
@@ -39,8 +43,12 @@ var ScoreWidget = React.createClass({
   render: function() {
     return(
       <form>
-        <input type="text" placeholder="120" />
-        <input type="submit" value="Score!" />
+        <div className="input-group">
+          <input type="text" className="form-control" placeholder="120" />
+          <span className="input-group-btn">
+            <button className="btn btn-default btn-danger" type="button">Score!</button>
+          </span>
+        </div>
       </form>
     );
   }
