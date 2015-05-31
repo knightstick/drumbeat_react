@@ -12,9 +12,10 @@
 
 FactoryGirl.define do
   factory :exercise do
-    name "MyString"
-image_url "MyString"
-description "MyString"
+    sequence(:name) { |n| "#{n} stroke roll"}
+    sequence(:tier) { |n| n }
+    image_url "http://example.com/image.jpg"
+    description "A very cool rudiment to impress all the ladies"
   end
 
 end

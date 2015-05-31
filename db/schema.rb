@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150524054146) do
+ActiveRecord::Schema.define(version: 20150531072119) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(version: 20150524054146) do
     t.text     "description", default: "", null: false
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
+    t.integer  "tier"
   end
 
   create_table "scores", force: :cascade do |t|
@@ -68,6 +69,15 @@ ActiveRecord::Schema.define(version: 20150524054146) do
 
   add_index "scores", ["exercise_id"], name: "index_scores_on_exercise_id", using: :btree
   add_index "scores", ["user_id"], name: "index_scores_on_user_id", using: :btree
+
+  create_table "unlocks", force: :cascade do |t|
+    t.integer  "exercise_id"
+    t.integer  "user_id"
+    t.datetime "unlocked_at"
+  end
+
+  add_index "unlocks", ["exercise_id"], name: "index_unlocks_on_exercise_id", using: :btree
+  add_index "unlocks", ["user_id"], name: "index_unlocks_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -89,4 +99,6 @@ ActiveRecord::Schema.define(version: 20150524054146) do
 
   add_foreign_key "scores", "exercises"
   add_foreign_key "scores", "users"
+  add_foreign_key "unlocks", "exercises"
+  add_foreign_key "unlocks", "users"
 end

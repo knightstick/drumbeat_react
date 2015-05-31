@@ -1,6 +1,6 @@
 class ExercisesController < ApplicationController
   def index
-    @exercises = Exercise.all
+    @exercises = ExercisesFacade.new(current_user)
   end
 
   def show

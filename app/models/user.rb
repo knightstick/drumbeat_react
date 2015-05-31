@@ -26,5 +26,14 @@ class User < ActiveRecord::Base
   validates :email, length: { maximum: 255 }
 
   has_many :scores, dependent: :destroy
-  has_many :exercises, through: :scores
+  has_many :unlocks, dependent: :destroy
+  has_many :exercises, through: :unlocks
+
+  after_create :unlock_initial_exercises
+
+  private
+
+  def unlock_initial_exercises
+    Unlock.unlock_initial_exercises(self)
+  end
 end

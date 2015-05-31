@@ -1,0 +1,17 @@
+<div class="panel panel-default panel-primary">
+  <div class='panel-heading'>Tier <%= tier %></div>
+  <div class="panel-body">
+    <table class='exercise-list table'>
+      <tr>
+        <th>Name</th>
+        <th class='center'>High Score</th>
+      </tr>
+      <% @exercises.exercises_for_tier(tier).each do |exercise| %>
+        <tr>
+          <td><%= link_to exercise.name, exercise %></td>
+          <td class='center'><%= exercise.scores.first.try(:score) %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
