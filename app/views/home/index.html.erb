@@ -1,7 +1,31 @@
-<%= react_component('Exercise',
-  {
-    exercise: {
-      name: 'Single Stroke Roll',
-      image_url: 'http://freedrumlessons.com/media/drum-lessons/drum-rudiments/single-stroke-roll-1.gif'
-    }
-  }) %>
+<div class="jumbotron">
+  <h1>Welcome to Drumbeat!</h1>
+  <p class="lead">Practice your rudiments, record your progress, and, share with friends (maybe at some point)!!!</p>
+  <p><%= link_to 'Go to my exercises', exercises_path, class:'btn btn-lg btn-success', role: 'button' %></p>
+</div>
+
+<div class="row marketing">
+  <div class="col-lg-6">
+    <h3>Recently played rudiments</h3>
+    <h4>Subheading</h4>
+    <p>Todo: these things would be nice, order rudiments based on when you scored them.</p>
+
+    <h4>Subheading</h4>
+    <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+
+    <h4>Subheading</h4>
+    <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+  </div>
+
+  <div class="col-lg-6">
+    <h3>New rudiments</h3>
+    <h4>Subheading</h4>
+    <p>Rudiments that don't yet have a score set.</p>
+
+    <h4>Subheading</h4>
+    <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+
+    <h4>Subheading</h4>
+    <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+  </div>
+</div>
