@@ -1,3 +1,17 @@
-<% @exercises.each do |exercise| %>
-  <%= link_to exercise.name, exercise %>
-<% end %>
+<div class="panel panel-default panel-primary">
+  <div class='panel-heading'>All Exercises</div>
+  <div class="panel-body">
+    <table class='exercise-list table'>
+      <tr>
+        <th>Name</th>
+        <th class='center'>High Score</th>
+      <% @exercises.each do |exercise| %>
+        <tr>
+          <td><%= link_to exercise.name, exercise %></td>
+          <td class='center'><%= exercise.scores.first.try(:score) %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
+
