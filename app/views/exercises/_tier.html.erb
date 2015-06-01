@@ -9,7 +9,8 @@
       <% @exercises.exercises_for_tier(tier).each do |exercise| %>
         <tr>
           <td><%= link_to exercise.name, exercise %></td>
-          <td class='center'><%= exercise.scores.first.try(:score) %></td>
+          <%# TODO: this is hacky, sort it out! %>
+          <td class='center'><%= exercise.scores.where(user: current_user).first.try(:score) %></td>
         </tr>
       <% end %>
     </table>
