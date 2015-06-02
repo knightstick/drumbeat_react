@@ -4,6 +4,8 @@ require "rspec_api_documentation/dsl"
 resource "Score" do
   before do
     @score = create(:score)
+    @exercise = create(:exercise)
+    @user = create(:user)
   end
 
   # get INDEX docs
@@ -32,6 +34,27 @@ resource "Score" do
       do_request
 
       expect(status).to eq 200
+    end
+  end
+
+  # post CREATE
+  post "/api/v1/exercises/:id/scores" do
+    let(:id) { @exercise.id }
+
+    parameter :user_email, 'User email'
+    parameter :user_token, 'Authentication token'
+    let(:user_email) { @user.email }
+    let(:user_token) { @user.authentication_token }
+
+    parameter :discipline, 'The type of score, i.e. 4 bars long', scope: :score
+    parameter :score, 'The numeric score acheived', scope: :score
+    let(:discipline) { 'bars_4'}
+    let(:score) { 120 }
+
+    example "Set a score for an exercise" do
+      do_request
+      puts response_body
+      expect(status).to eq 201
     end
   end
 end
