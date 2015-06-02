@@ -11,5 +11,7 @@ Rails.application.routes.draw do
     end
   end
 
+  get 'exercises/unlocks' => 'exercises#unlocks'
+  post 'exercises/unlock/:id' => 'exercises#unlock', as: 'exercise_unlock'
   resources :exercises, only: [:index, :show]
 end

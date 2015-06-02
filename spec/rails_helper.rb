@@ -51,6 +51,8 @@ RSpec.configure do |config|
 
   config.include FactoryGirl::Syntax::Methods
 
+  config.include Devise::TestHelpers, type: :controller
+
   # custom test helper methods
   def should_validate_length(attribute_names)
     attribute_names.each do |name|

@@ -30,10 +30,7 @@ var Scorecard = React.createClass({
 
   render: function() {
     return(
-      <div className='scorecard'>
-        <h1>Scorecard</h1>
-        <ScoreWidget exercise={this.props.exercise} />
-      </div>
+      <ScoreWidget exercise={this.props.exercise} />
     )
   }
 });
@@ -42,14 +39,16 @@ var ScoreWidget = React.createClass({
 
   render: function() {
     return(
-      <form>
-        <div className="input-group">
-          <input type="text" className="form-control" placeholder="120" />
-          <span className="input-group-btn">
-            <button className="btn btn-default btn-danger" type="button">Score!</button>
-          </span>
-        </div>
-      </form>
+      <div className='panel'>
+        <form>
+          <div className="input-group">
+            <input type="text" className="form-control" placeholder="120" />
+            <span className="input-group-btn">
+              <button className="btn btn-default btn-danger" type="button">Score!</button>
+            </span>
+          </div>
+        </form>
+      </div>
     );
   }
 });

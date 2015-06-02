@@ -23,11 +23,20 @@ RSpec.describe User, type: :model do
 
   describe 'Associations' do
     it { should have_many(:scores).dependent(:destroy) }
-    it { should have_many(:exercises).through(:scores)}
+    it { should have_many(:unlocks).dependent(:destroy) }
+    it { should have_many(:exercises).through(:unlocks) }
   end
 
   describe 'Validations' do
     it { should_validate_length_of_string_attributes_for_described_class only: [:email] }
     it { should_have_a_valid_factory }
+  end
+
+  describe 'Unlocks' do
+    it 'unlocks the first exercise automatically' do
+      exercise = create(:exercise)
+      user = User.create(attributes_for(:user))
+      expect(user.exercises).to include exercise
+    end
   end
 end

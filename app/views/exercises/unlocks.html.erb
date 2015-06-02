@@ -1,0 +1,19 @@
+<div class="panel panel-default panel-primary">
+  <div class='panel-heading'>Unlock a new exercise</div>
+  <div class="panel-body">
+    <% if @locked_exercises.any? %>
+      <table class='exercise-list table'>
+        <tr>
+          <th>Name</th>
+        </tr>
+        <% @locked_exercises.each do |exercise| %>
+          <tr>
+            <td><%= link_to exercise.name, exercise_unlock_path(exercise.id), method: :post %></td>
+          </tr>
+        <% end %>
+      </table>
+    <% else %>
+      <p>No more exercises available to unlock!</p>
+    <% end %>
+  </div>
+</div>
