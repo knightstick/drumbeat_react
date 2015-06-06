@@ -1,6 +1,8 @@
 require 'responders/json_responder'
 
 class BaseApiController < InheritedResources::Base
+  acts_as_token_authentication_handler_for User
+
   respond_to :json
   responders :json
 

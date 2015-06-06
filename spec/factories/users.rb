@@ -21,5 +21,6 @@ FactoryGirl.define do
   factory :user do
     sequence(:email) { |n| "bonzo#{n}@example.com"}
     password "password"
+    authentication_token 'authenticated'
   end
 end

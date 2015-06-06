@@ -1,0 +1,52 @@
+{
+  "resource": "Score",
+  "http_method": "PUT",
+  "route": "api/v1/exercises/:exercise_id/scores/:id",
+  "description": "update a score for an exercise",
+  "explanation": null,
+  "parameters": [
+    {
+      "scope": "score",
+      "name": "score",
+      "description": "The numeric score acheived"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "PUT",
+      "request_path": "api/v1/exercises/:exercise_id/scores/146",
+      "request_body": "score[score]=130",
+      "request_headers": {
+        "X-User-Email": "bonzo10@example.com",
+        "X-User-Token": "authenticated",
+        "Host": "example.org",
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/x-www-form-urlencoded",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"score\":{\"id\":146,\"score\":130,\"discipline\":\"bars_4\",\"user_id\":563,\"exercise_id\":734,\"created_at\":\"2015-06-06T03:26:35.212Z\",\"updated_at\":\"2015-06-06T03:26:35.235Z\"},\"meta\":{\"pagination\":{\"total_objects\":null}}}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Location": "http://example.org/api/v1/scores/146",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"779292d678995e255b7aadee6c0d94f2\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "Set-Cookie": "request_method=PUT; path=/",
+        "X-Request-Id": "345dcac9-e3bf-4b9f-85e7-6af7d05b98e0",
+        "X-Runtime": "0.043975",
+        "Content-Length": "211"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

@@ -23,6 +23,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  acts_as_token_authenticatable
+
   validates :email, length: { maximum: 255 }
 
   has_many :scores, dependent: :destroy
