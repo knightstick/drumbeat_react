@@ -3,8 +3,8 @@ require "rspec_api_documentation/dsl"
 
 resource "Score" do
   before do
-    @score = create(:score)
     @exercise = create(:exercise)
+    @score = create(:score, exercise: @exercise)
     @user = create(:user)
   end
 
@@ -46,8 +46,20 @@ resource "Score" do
 
       example "Set a score for an exercise" do
         do_request
-        puts response_body
         expect(status).to eq 201
+      end
+    end
+
+    # put UPDATE
+    put "api/v1/exercises/:exercise_id/scores/:id" do
+      let(:exercises_id) { @exercise.id }
+      let(:id) { @score.id }
+      parameter :score, 'The numeric score acheived', scope: :score
+      let(:score) { 130 }
+
+      example "update a score for an exercise" do
+        do_request
+        expect(status).to eq 200
       end
     end
   end
