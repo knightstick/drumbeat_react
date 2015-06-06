@@ -12,11 +12,6 @@
           "description": "Listing exercises",
           "link": "exercise/listing_exercises.json",
           "groups": "all"
-        },
-        {
-          "description": "Listing exercises from the letter B (pagination)",
-          "link": "exercise/listing_exercises_from_the_letter_b_(pagination).json",
-          "groups": "all"
         }
       ]
     },
@@ -34,8 +29,13 @@
           "groups": "all"
         },
         {
-          "description": "Listing scores from the letter B (pagination)",
-          "link": "score/listing_scores_from_the_letter_b_(pagination).json",
+          "description": "Set a score for an exercise",
+          "link": "score/set_a_score_for_an_exercise.json",
+          "groups": "all"
+        },
+        {
+          "description": "update a score for an exercise",
+          "link": "score/update_a_score_for_an_exercise.json",
           "groups": "all"
         }
       ]
