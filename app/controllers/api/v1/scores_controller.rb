@@ -2,7 +2,12 @@ class Api::V1::ScoresController < BaseApiController
   actions :index, :show, :create, :update, :destroy
 
   def create
-    @score = Score.new(user: current_user, exercise: Exercise.find(params[:exercise_id]))
+    @score = Score.new(
+      user: current_user,
+      exercise: Exercise.find(params[:exercise_id]),
+      discipline: params[:score][:discipline],
+      score: params[:score][:score]
+    )
     create!
   end
 
