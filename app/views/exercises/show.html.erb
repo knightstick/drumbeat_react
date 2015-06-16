@@ -1,2 +1,2 @@
 <%# TODO: render server-side %>
-<%= react_component('Exercise', { exercise: @exercise }) %>
+<%= react_component('Exercise', { exercise: @exercise, url: api_v1_exercise_scores_path(@exercise) }) %>
