@@ -10,7 +10,7 @@
         <tr>
           <td><%= link_to exercise.name, exercise %></td>
           <%# TODO: this is hacky, sort it out! %>
-          <td class='center'><%= exercise.scores.where(user: current_user).first.try(:score) %></td>
+          <td class='center'><%= exercise.scores.where(user: current_user).order(:created_at).last.try(:score) %></td>
         </tr>
       <% end %>
     </table>
